@@ -33,14 +33,14 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(apiDocumentation))
 // app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs, {explore: true}))
 
 //basic auth
-// app.use(basicAuth({
-//     users: {'ario' : 'sangatrahasia'},
-//     unauthorizedResponse: basicAuthRes
-// }))
+app.use(basicAuth({
+    users: {'ario' : 'sangatrahasia'},
+    unauthorizedResponse: basicAuthRes
+}))
 
-// function basicAuthRes(req){
-//     return req.auth ? ('Credentials' + req.auth.user + ':' + req.auth.password + 'rejected') : 'Unauthorized'
-// }
+function basicAuthRes(req){
+    return req.auth ? ('Credentials' + req.auth.user + ':' + req.auth.password + 'rejected') : 'Unauthorized'
+}
 
 //=========================
 //author = hak aksesnya
@@ -49,26 +49,26 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(apiDocumentation))
 
 
 //RAKAMIN
-app.get("/", (req, res) => {
-  const token = jwt.sign(
-    {
-      userID: 101,
-      role: "admin",
-    },
-    "naxcrd02",
-    { expiresIn: "1h" }
-  );
-  res.json({
-    token: token,
-  });
-});
+// app.get("/", (req, res) => {
+//   const token = jwt.sign(
+//     {
+//       userID: 101,
+//       role: "admin",
+//     },
+//     "naxcrd02",
+//     { expiresIn: "1h" }
+//   );
+//   res.json({
+//     token: token,
+//   });
+// });
 
-app.get("/verify/:token", (req, res) => {
-  const data = jwt.verify(req.params.token, "naxcrd02");
-  res.json({
-    data: data,
-  });
-});
+// app.get("/verify/:token", (req, res) => {
+//   const data = jwt.verify(req.params.token, "naxcrd02");
+//   res.json({
+//     data: data,
+//   });
+// });
 
 // ===========================
 
