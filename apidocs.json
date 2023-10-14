@@ -1,0 +1,67 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Express with Swagger",
+    "version": "0.1.0",
+    "description": "--"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000",
+      "description": "local"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Movies",
+      "description": "Film"
+    },
+    {
+      "name": "Movies",
+      "description": "Film"
+    }
+  ],
+  "paths": {
+    "/movies": {
+      "get": {
+        "tags": ["Movies"],
+        "summary": "Ambil semua Data film",
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "tags": ["Movies"],
+        "summary": "Tambahkan data baru dari Film",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "title": {
+                    "type": "string"
+                  },
+                  "genres": {
+                    "type": "string"
+                  },
+                  "year": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  }
+}

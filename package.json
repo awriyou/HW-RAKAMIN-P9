@@ -1,0 +1,31 @@
+{
+  "name": "hw-rakamin-p9",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/awriyou/HW-RAKAMIN-P9.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "express-basic-auth": "^1.2.1",
+    "jsonwebtoken": "^9.0.2",
+    "logging": "^3.3.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.0.1",
+    "pg": "^8.11.3",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/awriyou/HW-RAKAMIN-P9/issues"
+  },
+  "homepage": "https://github.com/awriyou/HW-RAKAMIN-P9#readme"
+}
